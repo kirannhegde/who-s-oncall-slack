@@ -1,5 +1,9 @@
 {
-    "REFRESH_TOKEN": "",
-    "SCHEDULE_NAME": "",
-    "SLACK_WEBHOOK_URL": ""
+    "REFRESH_TOKEN": "<Squadcast refresh token>",
+    "SCHEDULE_NAME": "<Squadcast schedule name>",
+    "SLACK_WEBHOOK_URL": "<Slack webhook URL>",
+    "SQUADCAST_TEAM_NAME": "<Squadcast team name>"
+    
 }
+
+

@@ -10,7 +10,8 @@ The script takes a configuration JSON file as its command-line argument which lo
 {
   "REFRESH_TOKEN": "Squadcast Refresh Token which will be used to be make requests to Public APIs",
   "SCHEDULE_NAME": "Name of the schedule for which we are getting the on-call people",
-  "SLACK_WEBHOOK_URL": "Slack incoming webhook URL for the channel to which we want to send the on-call notification"
+  "SLACK_WEBHOOK_URL": "Slack incoming webhook URL for the channel to which we want to send the on-call notification",
+  "SQUADCAST_TEAM_NAME": "Squadcast team where the on-call schedule is present."
 }
 ```
 

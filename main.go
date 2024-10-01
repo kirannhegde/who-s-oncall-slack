@@ -17,6 +17,7 @@ func main() {
 	// execute pipeline
 	NewOnCall(params).
 		GetAccessToken().
+		GetTeamID().
 		GetScheduleID().
 		GetOnCallPeople().
 		NotifySlack()

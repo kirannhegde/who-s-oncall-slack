@@ -13,6 +13,7 @@ type Params struct {
 	RefreshToken    string `json:"REFRESH_TOKEN"`
 	ScheduleName    string `json:"SCHEDULE_NAME"`
 	SlackWebhookURL string `json:"SLACK_WEBHOOK_URL"`
+	TeamName        string `json:"SQUADCAST_TEAM_NAME"`
 }
 
 var params = Params{}

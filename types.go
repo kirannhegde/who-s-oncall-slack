@@ -26,18 +26,54 @@ type SchedulesDetails struct {
 	Name string `json:"name"`
 }
 
-type OnCallResponse struct {
-	Data OnCallDetails `json:"data"`
+type TeamsResponse struct {
+	Data []TeamsDetails `json:"data"`
 }
 
-type OnCallDetails struct {
-	ShiftType string        `json:"shift_type"`
-	Users     []UserDetails `json:"users"`
+type TeamsDetails struct {
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }
 
-type UserDetails struct {
-	FirstName string `json:"first_name"`
-	LastName  string `json:"last_name"`
+// Structs to represent the JSON structure of the response
+type Contact struct {
+	DialCode    string `json:"dial_code"`
+	PhoneNumber string `json:"phone_number"`
+}
+
+type OnCallPerson struct {
+	ID                 string  `json:"id"`
+	FirstName          string  `json:"first_name"`
+	LastName           string  `json:"last_name"`
+	UsernameForDisplay string  `json:"username_for_display"`
+	Email              string  `json:"email"`
+	Contact            Contact `json:"contact"`
+}
+
+type Rotation struct {
+	CreatedAt string `json:"created_at"`
+	UpdatedAt string `json:"updated_at"`
+	DeletedAt string `json:"deleted_at"`
+	ID        int    `json:"id"`
+	Name      string `json:"name"`
+}
+
+type Schedule struct {
+	CreatedAt string     `json:"created_at"`
+	UpdatedAt string     `json:"updated_at"`
+	DeletedAt string     `json:"deleted_at"`
+	ID        int        `json:"id"`
+	Name      string     `json:"name"`
+	Rotations []Rotation `json:"rotations"`
+}
+
+type Data struct {
+	Schedule Schedule       `json:"schedule"`
+	Oncall   []OnCallPerson `json:"oncall"`
+}
+
+type OnCallApiResponse struct {
+	Data []Data `json:"data"`
 }
 
 type SlackWebhookRequest struct {
